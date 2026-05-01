@@ -1,0 +1,4 @@
+repository "GDIM 33 Game/GDIM 33 Game@18967231417117@cloud"
+  path "/"
+    br "/main"
+    co "/main"
