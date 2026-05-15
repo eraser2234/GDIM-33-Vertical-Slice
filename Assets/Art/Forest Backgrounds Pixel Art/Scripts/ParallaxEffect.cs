@@ -23,7 +23,6 @@ namespace ForestBackgroundsPixelArt
             player = GameObject.FindWithTag("Player").GetComponent<Transform>();
             spriteWidth = GetComponent<SpriteRenderer>().bounds.size.x / 3;
 
-            transform.position = new Vector2(mainCamera.position.x, player.position.y - 1f);
             initialPos = transform.position;
         }
 
@@ -32,9 +31,11 @@ namespace ForestBackgroundsPixelArt
             translationOffset += independantSpeed * Time.deltaTime * parallaxIntensityX;
 
             float parallaxOffsetX = (mainCamera.position.x * (1 - (parallaxIntensityX / 2))) + translationOffset;
-            float parallaxOffsetY = ((mainCamera.position.y / cameraSize) / 0.7f) * (1 - parallaxIntensityY);
 
-            transform.position = new Vector2(initialPos.x + parallaxOffsetX, initialPos.y + parallaxOffsetY);
+            transform.position = new Vector2(
+                initialPos.x + parallaxOffsetX,
+                initialPos.y
+            );
 
             float cameraOffsetX = mainCamera.position.x - transform.position.x;
 
