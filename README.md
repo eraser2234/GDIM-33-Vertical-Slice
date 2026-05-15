@@ -54,7 +54,7 @@ The character will reflect the player’s movement with animations such as idle,
 5. Use the Animator to control animation transitions.
 6. Use nodes to detect player input.
 7. Connect the player input to Animator variables.
-
+### 
 2. Yes, at some point, it helped me focus on the necessary features.
 3. I am still working on the script. I would like to use it to manage items when they are added to the inventory, and it should call scripts from the Graph since it would be easier to manage.
 4. The system I used is Animator. I use it to reflect character movement. It shows a mirrored animation when the character moves backward, and it has two animation states: idle and moving.
