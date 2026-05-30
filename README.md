@@ -59,3 +59,14 @@ The character will reflect the player’s movement with animations such as idle,
 3. I am still working on the script. I would like to use it to manage items when they are added to the inventory, and it should call scripts from the Graph since it would be easier to manage.
 4. The system I used is Animator. I use it to reflect character movement. It shows a mirrored animation when the character moves backward, and it has two animation states: idle and moving.
 5. The most complicated gameplay system I made is the inventory system. It can identify which slot is currently being hovered over, and the player can only use a tool when that item is selected. However, even if no item is selected, the player can still press X again to close the inventory. Reopening the inventory resets the hovered state back to the first slot, which is useful if the hover animation disappears.
+
+## Milestone3
+
+
+### ShaderGraph
+![shadergraph](https://github.com/user-attachments/assets/483caf8c-af36-415f-8d40-f1ab859feb57)
+
+I use shader graph on the pickable item.
+
+(I couldn't finish the rest of the devlog because I had an issue of login Canva since Thursday, and I also couldn't send / receive email from UCI email address now)
+
