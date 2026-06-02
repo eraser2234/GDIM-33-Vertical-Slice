@@ -68,5 +68,14 @@ The character will reflect the player’s movement with animations such as idle,
 
 I use shader graph on the pickable item.
 
-(I couldn't finish the rest of the devlog because I had an issue of login Canva since Thursday, and I also couldn't send / receive email from UCI email address now)
+I created a shine effect using Shader Graph for collectible items in my game. The shader uses a Time node multiplied by ShineSpeed property to generate a continuously increasing value. Fraction node is then used to keep the value between 0 and 1, which creating a looping animation.
 
+The UV coordinates are combined with this animated value using an Add node, which shifts the UVs over time to sample a Shine Texture, causing the highlight pattern on item.
+
+The shader also uses a Mask Texture to control which parts of the sprite receive the shine effect and a Normal Map connected to the Sprite Lit Master Stack to preserve compatibility with the URP 2D lighting system.
+
+### What I improved
+Based on feedback from playtesting, I made several improvements to the gameplay experience. First, I added a shining shader effect to interactive items so players can more easily identify objects that can be picked up. Second, I fixed an inventory index issue that sometimes caused the hover indicator to display on the wrong slot, making inventory navigation more reliable. Finally, I added instructions to the inventory panel to help players understand the controls and reduce accidental item selections.
+
+### New Content
+Since the last milestone, I created a new scene to expand the game world for players to explore. I also implemented a scene transition system that is triggered when the player moves onto a sign. Once the puzzle in the current area is solved, the player can use the sign to travel to the next level.In addition, I used Unity's particle system to create a snowfall effect, which helps enhance the atmosphere of the scene.
