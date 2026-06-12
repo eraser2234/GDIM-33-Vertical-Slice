@@ -98,6 +98,10 @@ For the rendering effect, I used Shader Graph to create a glowing effect on the 
 
 I also added a post-processing effect after the player offers the flowers to the statue. This effect makes the scene appear to glow with a more holy or sacred feeling. I created a different URP renderer setup for this post effect and connected it to a second camera. When the flower offering event happens, the gameplay logic switches from the main camera to the post-effect camera. After the effect duration ends, the logic switches back to the main camera. This allows the rendering effect to be activated directly from gameplay progress.
 
+In my Glow PostEffect Shader Graph, I exposed EffectTex and EffectAmountas properties. EffectTex provides the texture pattern for the glow, and EffectAmount controls how strong the effect is.
+
+The shader uses a URP Sample Buffer node to read the current screen from the Blit Source. This makes the shader work as a full-screen post effect. I also used a Sample Texture 2D node to read the effect texture. Then I combined the original screen color and the texture pattern with Multiply and Lerp nodes, so the final image keeps the original scene but adds the glowing texture on top of it. To make the glow less static, I used the Time node with math nodes such as Add and Divide. This creates a repeating animated value, which affects the Alpha output and makes the glow pulse over time.
+
 ![The Shader Graph](https://github.com/user-attachments/assets/7442bb71-af66-4e91-b407-455e3d3044d5)
 
 ### Devlog
