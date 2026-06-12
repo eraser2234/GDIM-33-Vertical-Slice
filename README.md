@@ -82,9 +82,9 @@ Since the last milestone, I created a new scene to expand the game world for pla
 
 ## Final
 
-# Devlog
 
-1. Briefly describe your core gameplay loop and the content we can find in your game. Then, relate the gameplay and content you implemented back to your original plan for creating a Vertical Slice: how does this gameplay and content illustrate to the player what the full game would be like?
+
+### Core gameplay loop and the content
 
 My core gameplay loop is a puzzle game where the player needs to understand the requirement of each obstacle, choose the correct item, and use that item to pass the obstacle. The player controls the game fully with the keyboard. They use A and D to move left and right, Space to pick up items or select items, Z to use the selected item, and X to open the inventory. Before using an item, the player needs to open the inventory and choose the item they want to use.
 
@@ -92,7 +92,7 @@ Currently, the game has two levels. In the first level, the player needs to use 
 
 I also added audio feedback for item use to make the gameplay feel more polished. For example, when the axe is used, it plays a sound effect.
 
-2. In about a paragraph, describe how your rendering effect is activated from gameplay logic. Either attach a screenshot of the relevant Graph OR cite the relevant C# file(s) so we can find them in your repo. Accurately describe your system with technical terms.
+### Rendering effect
 
 For the rendering effect, I used Shader Graph to create a glowing effect on the axe. The shader uses a Texture2D, Time, and Fraction node so the glow appears repeatedly at a regular frequency. I also used UV and texture information to make the glowing pattern less flat and give it a more specific shape. This makes the axe visually stand out as an important item that the player can interact with.
 
@@ -100,19 +100,21 @@ I also added a post-processing effect after the player offers the flowers to the
 
 ![The Shader Graph](add later)
 
-3. Describe your process for how you break down a large project into specific systems. If you don't have a process that works well for you right now, you must come up with and describe a viable plan.
+### Devlog
+
+1. Describe your process for how you break down a large project into specific systems. If you don't have a process that works well for you right now, you must come up with and describe a viable plan.
 
 For project planning, the task step break-down process works better for me than a broad plan alone. When I write the task steps clearly, it helps me organize my thoughts and also gives me more specific instructions to follow during development. My process is to first identify the core gameplay loop, then separate the project into systems such as player movement, item pickup, inventory, item usage, puzzle logic, level transition, visual effects, and audio feedback. After that, I break each system into smaller tasks that I can test one by one.
 
-4. Do you plan on using either the bubble diagram break-downs and/or the task step break-downs we practiced this quarter in your planning process? Why or why not?
+2. Do you plan on using either the bubble diagram break-downs and/or the task step break-downs we practiced this quarter in your planning process? Why or why not?
 
 I plan to keep using task step break-downs in my planning process. For me, task step break-downs are more useful because they turn a large feature into clear actions. This helps me know what to build first and what to test after each step. I may still use bubble diagrams when I need to understand the relationship between systems, but task step break-downs are more helpful when I actually start implementing the feature.
 
-5. How does the process of breaking down a large project into small steps affect your understanding of the scope of the project?
+3. How does the process of breaking down a large project into small steps affect your understanding of the scope of the project?
 
 Breaking down a large project into smaller steps helped me understand the real scope of the project. Some features looked simple at first, but after breaking them down, I realized they required multiple smaller systems to work together. For example, the inventory was not only a UI panel. It also needed player input control, item selection logic, item usage logic, and animation feedback. Because of this, breaking down the project helped me estimate the work more realistically and avoid treating complex systems as simple tasks.
 
-6. How does the plan you're describing relate to your process of creating the Vertical Slice project? You can write about either how things went poorly and how you'd improve your process as a result, or about how things went well that you want to repeat.
+4. How does the plan you're describing relate to your process of creating the Vertical Slice project? You can write about either how things went poorly and how you'd improve your process as a result, or about how things went well that you want to repeat.
 
 This planning process relates directly to my Vertical Slice project because the inventory system was one of the most complex systems I created. I designed the logic and animation behavior from the beginning by myself, so breaking it into smaller tasks helped me finish the feature. For example, I separated the work into opening the inventory, stopping player movement, navigating items, selecting an item, and using the item in the puzzle. I was happy that I completed this system because it became an important part of the core gameplay loop.
 
