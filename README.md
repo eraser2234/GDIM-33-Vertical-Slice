@@ -98,7 +98,7 @@ For the rendering effect, I used Shader Graph to create a glowing effect on the 
 
 I also added a post-processing effect after the player offers the flowers to the statue. This effect makes the scene appear to glow with a more holy or sacred feeling. I created a different URP renderer setup for this post effect and connected it to a second camera. When the flower offering event happens, the gameplay logic switches from the main camera to the post-effect camera. After the effect duration ends, the logic switches back to the main camera. This allows the rendering effect to be activated directly from gameplay progress.
 
-![The Shader Graph](add later)
+![The Shader Graph](https://github.com/user-attachments/assets/7442bb71-af66-4e91-b407-455e3d3044d5)
 
 ### Devlog
 
